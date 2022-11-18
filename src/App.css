@@ -1,38 +1,98 @@
 .App {
-  text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tools {
+    width: 100%;
+    height: 12%;
+    /* background-color: rgb(212, 211, 211); */
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pen-tools {
+    display: flex;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pen {
+    margin: 0 0.3rem;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.color {
+    width: 36px;
+    height: 36px;
+    margin: 0 0.3rem;
+    cursor: pointer;
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.check {
+    position: absolute;
+    left: 6px;
+    top: 5px;
+}
+
+.eraser {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.pen-settings {
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.canvas {
+    background-color: pink;
+    width: 100%;
+    height: 88%;
+}
+
+/* ******* slider styling ******** */
+.slider {
+    -webkit-appearance: none;
+    margin: 0 1.5rem;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #acacac;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+}
+
+/* ********* disenabling selection ********** */
+
+body {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+img {
+    pointer-events: none;
+}
+
+.selected {
+    border: 3px solid #7dc3ff;
+    border-radius: 50%;
+}
+.notSelected {
+    border: 3px solid;
+    border-color: white;
+    border-radius: 50%;
 }
