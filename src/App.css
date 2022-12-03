@@ -1,68 +1,40 @@
+#root,
 .App {
-    width: 100%;
     height: 100%;
-}
-
-.tools {
     width: 100%;
-    height: 12%;
-    /* background-color: rgb(212, 211, 211); */
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
 }
 
-.pen-tools {
-    display: flex;
-    align-items: center;
+.navHeight {
+    height: 10%;
 }
 
-.pen {
-    margin: 0 0.3rem;
+.circle {
+    border-radius: 50%;
+    margin-right: 0.5rem;
     cursor: pointer;
-}
-
-.color {
-    width: 36px;
-    height: 36px;
-    margin: 0 0.3rem;
-    cursor: pointer;
+    border: 3px solid white;
     position: relative;
 }
 
 .check {
     position: absolute;
-    left: 6px;
-    top: 5px;
+    top: 0;
+    left: 0;
 }
 
-.eraser {
-    margin: 0 1rem;
-    cursor: pointer;
+.selected {
+    border: 3px solid rgb(163, 163, 247);
 }
 
-.pen-settings {
-    margin-left: 10%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.canvas {
-    background-color: pink;
-    width: 100%;
-    height: 88%;
-}
-
-/* ******* slider styling ******** */
 .slider {
     -webkit-appearance: none;
     margin: 0 1.5rem;
-    width: 100%;
+    width: 80%;
     height: 4px;
     border-radius: 5px;
     background: #acacac;
     outline: none;
+    cursor: pointer;
 }
 
 .slider::-webkit-slider-thumb {
@@ -72,7 +44,6 @@
     height: 15px;
     border-radius: 50%;
     background: #000000;
-    cursor: pointer;
 }
 
 /* ********* disenabling selection ********** */
@@ -81,18 +52,4 @@ body {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-}
-
-img {
-    pointer-events: none;
-}
-
-.selected {
-    border: 3px solid #7dc3ff;
-    border-radius: 50%;
-}
-.notSelected {
-    border: 3px solid;
-    border-color: white;
-    border-radius: 50%;
 }
